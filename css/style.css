@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 body {
+  min-width: 1100px;
   font-family: 'Lato', sans-serif;
   color: #333;
 }
@@ -28,6 +29,7 @@ body {
 }
 
 .bolt-icon {
+  margin-left: 20px;
   color: #4e4e4e;
 }
 
@@ -37,6 +39,7 @@ body {
   right: 0;
   transform: translateY(-50%);
   transition: color 0.3s;
+  margin-right: 20px;
   padding: 14px 12px;
   text-decoration: none;
   font-size: 12px;
@@ -46,6 +49,10 @@ body {
 
 .header_link:hover {
   color: #333;
+}
+
+.burger-menu {
+  display: none;
 }
 
 .main {
@@ -68,6 +75,7 @@ body {
 }
 
 .subtitle {
+  display: inline-block;
   margin-top: 20px;
   font-size: 30px;
   color: #c0c0c0;
@@ -86,6 +94,7 @@ body {
 }
 
 .intro_content {
+  width: 650px;
   text-align: center;
 }
 
@@ -94,10 +103,8 @@ body {
 }
 
 .intro_text {
-  width: 650px;
   margin-top: 35px;
   font-size: 20px;
-  word-break: normal;
 }
 
 .product {
@@ -118,22 +125,22 @@ body {
   font-size: 0;
 }
 
-.product_link {
+.product_list {
   display: inline-block;
   margin: 80px 0 0 100px;
   opacity: 0.7;
   transition: opacity 0.3s
 }
 
-.product_link:nth-child(-n+3) {
+.product_list:nth-child(-n+3) {
   margin-top: 0;
 }
 
-.product_link:nth-child(1), .product_link:nth-child(3n+4) {
+.product_list:nth-child(1), .product_list:nth-child(3n+4) {
   margin-left: 0;
 }
 
-.product_link:hover {
+.product_list:hover {
   opacity: 1;
 }
 
@@ -150,6 +157,7 @@ body {
 }
 
 .product_link-email {
+  display: inline-block;
   transition: color 0.3s;
   padding: 14px 20px;
   margin-left: 90px;
@@ -188,7 +196,7 @@ body {
 }
 
 .detail_unit:first-child {
-  margin-left: 0;
+  margin: 0;
 }
 
 .detail_item-desc {
@@ -229,4 +237,128 @@ body {
   padding: 20px 0 25px 0;
   text-align: right;
   color: #fff;
+}
+
+.footer_text {
+  margin-right: 20px;
+}
+
+/* タブレット用CSS */
+@media screen and (max-width: 1199px) {
+  .inner {
+    width: 100%;
+  }
+
+  .intro_inner {
+    display: block;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+
+  .intro_content {
+    margin: 0 auto;
+    width: 950px;
+  }
+
+  .intro_heading {
+    margin-top: 20px;
+  }
+
+  .product_list {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  .product_list:nth-child(1) {
+    margin-left: auto;
+  }
+
+  .product_list:nth-child(3n+4) {
+    margin-top: 80px;
+    margin-left: auto;
+  }
+
+  .product_lead {
+    display: block;
+    margin-top: 80px;
+  }
+
+  .product_text {
+    margin: 0 auto;
+    width: 1000px;
+  }
+
+  .product_link-email {
+    margin: 40px 0 0 0;
+  }
+
+  .detail_content {
+    display: block;
+  }
+
+  .detail_unit {
+    margin: 88px 0 0 0;
+  } 
+}
+
+/* スマートフォン用CSS */
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 330px;
+  }
+
+  .header_link {
+    display: none;
+  }
+
+  .burger-menu {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    padding: 10px;
+    color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .title_inner {
+    padding: 160px 0 130px 0;
+  }
+
+  .title_heading {
+    margin: 0 auto;
+    width: 300px;
+    font-size: 80px;
+  }
+
+  .subtitle {
+    width: 300px;
+  }
+
+  .intro_content {
+    width: 297px;
+  }
+
+  .product_text {
+    width: 330px;
+  }
+
+  .product_item {
+    width: 97%;
+  }
+
+  .nav-sns_inner {
+    display: block;
+    padding: 50px 0;
+  }
+
+  .nav_link {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
 }
